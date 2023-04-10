@@ -47,7 +47,7 @@ const Home = () => {
       .catch(() => {
         navigate("/error");
       });
-  }, []);
+  }, [navigate]);
 
   return !filteredProducts || !brands || !categories ? (
     <img src={Spinner} alt="Loading spinner" />
