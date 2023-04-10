@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-at0fa(9n4#4v45l#_%b-t!^m*ogf^6yj^n%l8!rk4801d*%(bm"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "http://my-telia-app.s3-website.us-east-2.amazonaws.com"
+]
 
 
 # Application definition
