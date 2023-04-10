@@ -40,7 +40,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data: IData) => {
         setProducts(data.products);
-        console.log(data.products);
         setBrands(data.uniqueBrands);
         setCategories(data.uniqueCategories);
       })
@@ -50,7 +49,11 @@ const Home = () => {
   }, [navigate]);
 
   return !filteredProducts || !brands || !categories ? (
-    <img src={Spinner} alt="Loading spinner" />
+    <img
+      style={{ display: "block", margin: "auto" }}
+      src={Spinner}
+      alt="Loading spinner"
+    />
   ) : (
     <div style={{ margin: "10px" }}>
       <FilterSelect
